@@ -30,7 +30,7 @@ header {
 header h1 {
   font-family: 'Georgia', 'Times New Roman', serif;
   font-style: italic;
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--bg);
   -webkit-text-stroke: 1.5px var(--text);
   text-shadow: 2px 2px 0 rgba(0,0,0,.08);
