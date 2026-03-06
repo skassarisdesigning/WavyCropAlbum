@@ -2,13 +2,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f4f0ec; /* здесь вы можете изменить цвет фона */
+  --bg: #202020; /* здесь вы можете изменить цвет фона */
   --card: #ffffff;
   --accent: #7c5cbf;
   --accent-hover: #5e3fa3;
   --danger: #d9534f;
   --danger-hover: #c9302c;
-  --text: #333; /* здесь вы можете изменить цвет текста */
+  --text: #d4d4d4; /* здесь вы можете изменить цвет текста */
   --muted: #999;
   --radius: 12px;
   --shadow: 0 2px 12px rgba(0,0,0,.08);
