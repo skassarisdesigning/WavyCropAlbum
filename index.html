@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фигурная обрезка — Виртуальный альбом</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>✂️ Фигурный дырокол</h1>
+    <p class="subtitle">Загрузите фото, обрежьте волнистой рамкой и добавьте в альбом</p>
+  </header>
+
+  <main>
+    <!-- Upload section -->
+    <section id="upload-section" class="card">
+      <div id="drop-zone" class="drop-zone">
+        <span class="drop-zone__icon">📷</span>
+        <p>Перетащите изображение сюда<br/>или <label for="file-input" class="link">выберите файл</label></p>
+        <input type="file" id="file-input" accept="image/*" hidden />
+      </div>
+    </section>
+
+    <!-- Editor section (hidden until image loaded) -->
+    <section id="editor-section" class="card hidden">
+      <h2>Предпросмотр и обрезка</h2>
+
+      <div class="editor-layout">
+        <div class="editor-preview">
+          <canvas id="preview-canvas"></canvas>
+        </div>
+
+        <div class="editor-controls">
+          <label>
+            Ширина обрезки
+            <input type="range" id="crop-width" min="100" max="600" value="360" />
+          </label>
+          <label>
+            Высота обрезки
+            <input type="range" id="crop-height" min="100" max="600" value="260" />
+          </label>
+          <label>
+            Амплитуда волны
+            <input type="range" id="wave-amp" min="2" max="30" value="10" />
+          </label>
+          <label>
+            Частота волны
+            <input type="range" id="wave-freq" min="4" max="40" value="16" />
+          </label>
+
+          <div class="btn-group">
+            <button id="btn-add" class="btn btn-primary">Добавить в альбом</button>
+            <button id="btn-reset" class="btn btn-secondary">Сбросить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Album section -->
+    <section id="album-section" class="card">
+      <h2>📖 Мой альбом</h2>
+      <div id="album-grid" class="album-grid">
+        <p id="album-empty" class="muted">Альбом пуст. Загрузите фото и добавьте сюда!</p>
+      </div>
+      <button id="btn-clear-album" class="btn btn-danger hidden">Очистить альбом</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
