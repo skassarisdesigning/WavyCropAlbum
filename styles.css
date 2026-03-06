@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #202020; /* здесь вы можете изменить цвет фона */
+  --bg: #ff0000; /* здесь вы можете изменить цвет фона */
   --card: #ffffff;
   --accent: #7c5cbf;
   --accent-hover: #5e3fa3;
