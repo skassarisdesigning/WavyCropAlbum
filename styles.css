@@ -1,21 +1,33 @@
 /* ── Reset & Base ───────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
-  --bg: #f4f0ec; /* здесь вы можете изменить цвет фона */
+  --bg: #f4f0ec;
+  /* здесь вы можете изменить цвет фона */
   --card: #ffffff;
   --accent: #7c5cbf;
   --accent-hover: #5e3fa3;
   --danger: #d9534f;
   --danger-hover: #c9302c;
-  --text: #333; /* здесь вы можете изменить цвет текста */
+  --text: #333;
+  /* здесь вы можете изменить цвет текста */
   --muted: #999;
   --radius: 12px;
-  --shadow: 0 2px 12px rgba(0,0,0,.08);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -27,22 +39,24 @@ header {
   text-align: center;
   padding: 36px 0 12px;
 }
+
 header h1 {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: "Georgia", "Times New Roman", serif;
   font-style: italic;
   font-size: 3rem;
   color: var(--bg);
   -webkit-text-stroke: 1.5px var(--text);
-  text-shadow: 2px 2px 0 rgba(0,0,0,.08);
-  letter-spacing: .02em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.02em;
 }
+
 .subtitle {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-style: italic;
   color: var(--muted);
   margin-top: 6px;
-  font-size: .95rem;
-  letter-spacing: .03em;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
 }
 
 /* ── Card ───────────────────────────────────────────── */
@@ -54,7 +68,11 @@ header h1 {
   box-shadow: var(--shadow);
   padding: 28px;
 }
-.card h2 { margin-bottom: 16px; font-size: 1.25rem; }
+
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
 
 /* ── Drop zone ──────────────────────────────────────── */
 .drop-zone {
@@ -63,14 +81,23 @@ header h1 {
   padding: 48px 24px;
   text-align: center;
   cursor: pointer;
-  transition: background .2s, border-color .2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
 }
+
 .drop-zone:hover,
 .drop-zone.drag-over {
   background: #ede7f6;
   border-color: var(--accent);
 }
-.drop-zone__icon { font-size: 3rem; display: block; margin-bottom: 8px; }
+
+.drop-zone__icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
 .drop-zone .link {
   color: var(--accent);
   cursor: pointer;
@@ -84,6 +111,7 @@ header h1 {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
 .editor-preview {
   flex: 1 1 340px;
   display: flex;
@@ -93,40 +121,73 @@ header h1 {
   padding: 12px;
   min-height: 200px;
 }
+
 .editor-preview canvas {
   max-width: 100%;
   height: auto;
 }
+
 .editor-controls {
   flex: 0 0 220px;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+
 .editor-controls label {
-  font-size: .85rem;
+  font-size: 0.85rem;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.editor-controls input[type="range"] { width: 100%; }
+
+.editor-controls input[type="range"] {
+  width: 100%;
+}
 
 /* ── Buttons ────────────────────────────────────────── */
 .btn {
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background .2s;
+  transition: background 0.2s;
 }
-.btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: var(--accent-hover); }
-.btn-secondary { background: #e0e0e0; color: var(--text); }
-.btn-secondary:hover { background: #ccc; }
-.btn-danger { background: var(--danger); color: #fff; margin-top: 16px; }
-.btn-danger:hover { background: var(--danger-hover); }
-.btn-group { display: flex; gap: 10px; margin-top: 6px; }
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: #e0e0e0;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #ccc;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+  margin-top: 16px;
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
 
 /* ── Album grid ─────────────────────────────────────── */
 .album-grid {
@@ -134,37 +195,52 @@ header h1 {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
 }
+
 .album-item {
   position: relative;
   background: repeating-conic-gradient(#e8e8e8 0% 25%, #fff 0% 50%) 0 0 / 12px 12px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
-.album-item:hover { transform: scale(1.03); }
+
+.album-item:hover {
+  transform: scale(1.03);
+}
+
 .album-item img {
   width: 100%;
   display: block;
 }
+
 .album-item button {
   position: absolute;
   top: 6px;
   right: 6px;
-  background: rgba(0,0,0,.55);
+  background: rgba(0, 0, 0, 0.55);
   color: #fff;
   border: none;
   border-radius: 50%;
   width: 26px;
   height: 26px;
-  font-size: .85rem;
+  font-size: 0.85rem;
   cursor: pointer;
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
-.album-item:hover button { opacity: 1; }
 
-.muted { color: var(--muted); text-align: center; grid-column: 1 / -1; }
+.album-item:hover button {
+  opacity: 1;
+}
+
+.muted {
+  color: var(--muted);
+  text-align: center;
+  grid-column: 1 / -1;
+}
 
 /* ── Utility ────────────────────────────────────────── */
-.hidden { display: none !important; }
+.hidden {
+  display: none !important;
+}
